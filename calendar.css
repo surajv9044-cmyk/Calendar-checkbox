@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: #e8eef5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.calendar{
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header button{
+    padding: 8px 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.days, .dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+    text-align: center;
+}
+.days div{
+    font-weight: bold;
+    color: #2563eb;
+    padding: 8px 0;
+}
+.date{
+    background: #f1f5f9;
+    padding: 8px 2px;
+    border-radius: 7px;
+    min-height: 55px;
+}
+.date span{
+    display: block;
+    margin-bottom: 5px;
+}
+.date input{
+    cursor: pointer;
+    accent-color: #16a34a;
+}
+.date input:checked{
+    accent-color: #16a34a;
+}
+.date:has(input:checked){
+    background: #bbf7d0;
+}
+.today{
+    border: 2px solid#2563eb;
+}
